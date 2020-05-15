@@ -1,0 +1,16 @@
+{% extends 'my_template.html' %}
+
+{% block content %}
+
+    <hr>
+        <big>
+            <strong>CSV File Date:</strong>
+        </big>
+        {% now "jS F Y H:i:s" %}
+    <hr>
+
+    {% autoescape off %}
+        {{ creator_var }}
+    {% endautoescape %}
+
+{% endblock %}

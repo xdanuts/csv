@@ -1,0 +1,9 @@
+<form method="post" action="{% url 'csv_display' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+        <p>
+            CSV: <input type="file" name="file" accept=".csv">
+        </p>
+    <button type="submit">Display CSV</button>
+</form>
+{% block content %}
+{% endblock %}
